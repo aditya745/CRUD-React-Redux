@@ -2,9 +2,9 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 
 const AddUserForm = props => {
-    const { handleSubmit, pristine, submitting } = props;
+    const { handleSubmit, pristine, submitting, reset } = props;
     return (
-        <form onSubmit= {handleSubmit}>
+        <form onSubmit = {handleSubmit}>
             <div>
                 <label>First Name</label>    
                 <div>
@@ -38,6 +38,11 @@ const AddUserForm = props => {
             <div>
                <button type="submit" disabled={pristine || submitting}>
                 Submit
+               </button>
+            </div>
+            <div>
+               <button type="button" disabled={pristine || submitting} onClick= {reset}>
+                Clear Values
                </button>
             </div>
         </form>

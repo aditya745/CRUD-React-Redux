@@ -21,7 +21,7 @@ class UserList extends Component {
     this.props.getInfo();
   }
   handleAddUser = values => {
-    this.props.addInfo(values)
+    this.props.addInfo(values);
   };
   handleDeleteUser = firstName => {
     this.props.deleteUser(firstName);
