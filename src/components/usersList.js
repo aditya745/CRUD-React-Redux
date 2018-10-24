@@ -37,6 +37,10 @@ class UserList extends Component {
 
   handleSaveEdit = user => {
     this.props.saveUser(user);
+    this.setState({
+      isEditing: false,
+      editUserData: {}
+    })
   };
 
   render() {
